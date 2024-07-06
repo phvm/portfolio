@@ -1,11 +1,13 @@
 <template>
-  <nav>
-    <div v-for="data in pagesNavbarData" :key="data.name">{{ data.name }}</div>
-  </nav>
+  <header class="flex justify-between pr-3 py-4 border-b-2 sticky">
+    <h1 class="ml-2">Pedro Moura</h1>
+    <nav>
+      <NavbarButton v-for="data in pagesNavbarData" :key="data.name" :link="data.link" :name="data.name" />
+    </nav>
+  </header>
 </template>
 
 <script setup lang="ts">
-import { pagesNavbarData } from '../utils/constants'
+import NavbarButton from './NavbarButton.vue';
+import { pagesNavbarData } from '../utils/constants';
 </script>
-
-<style scoped></style>
