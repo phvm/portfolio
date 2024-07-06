@@ -1,7 +1,4 @@
-interface PagesNavbarHeader {
-  name: string
-  link: string
-}
+import type { PagesNavbarHeader } from '@/types/componentTypes'
 
 export const pagesNavbarData: PagesNavbarHeader[] = [
   { name: 'Home', link: '/' },
