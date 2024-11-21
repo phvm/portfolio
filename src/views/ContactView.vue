@@ -1,5 +1,5 @@
 <template>
-  <div>askdadsa</div>
+  <div></div>
 </template>
 
 <script setup lang="ts"></script>

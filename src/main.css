@@ -15,3 +15,23 @@
 body {
   -webkit-font-smoothing: antialiased;
 }
+
+@layer base {
+  :root {
+    --accent: #5b2dc4;
+    --background: #fbfbfb;
+    --foreground: #181818;
+    --warning: #ffd800;
+    --destructive: #dc143c;
+    --muted: #A4B8C4;
+  }
+
+  .dark {
+    --accent: #3d1e85;
+    --background: #242424;
+    --foreground: #f2f0f2;
+    --warning: #f7b32b;
+    --destructive: #950e29;
+    --muted: #A4B8C4;
+  }
+}
