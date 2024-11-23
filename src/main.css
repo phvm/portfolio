@@ -30,6 +30,7 @@ body {
         --destructive: #950e29;
         --muted: #A4B8C4;
         --faded: #A68BE5;
+        --elevation: rgba(0, 0, 0, 0.2);
     }
 
     .dark {
@@ -39,6 +40,11 @@ body {
         --warning: #ffd800;
         --destructive: #dc143c;
         --muted: #A4B8C4;
-        --faded: #BFACEC
+        --faded: #BFACEC;
+        --elevation: rgba(255, 255, 255, 0.2);
+    }
+
+    body {
+        @apply bg-background text-foreground
     }
 }

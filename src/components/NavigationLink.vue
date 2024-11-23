@@ -10,5 +10,5 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <RouterLink :to="props.link" class="text-foreground hover:underline">{{ props.text }}</RouterLink>
+  <RouterLink :to="props.link" class="p-1 hover:underline">{{ props.text }}</RouterLink>
 </template>
