@@ -6,6 +6,7 @@ export default {
     darkMode: "selector",
     colors: {
       accent: "var(--accent)",
+      accentForeground: "var(--accent-foreground)",
       background: "var(--background)",
       foreground: "var(--foreground)",
       muted: "var(--muted)",

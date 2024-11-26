@@ -5,46 +5,48 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *::selection {
-    background-color: var(--accent);
-    color: var(--foreground);
+  background-color: var(--accent);
+  color: var(--foreground);
 }
 
 * {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 @layer base {
-    :root {
-        --accent: #3d1e85;
-        --background: #fbfbfb;
-        --foreground: #181818;
-        --warning: #f7b32b;
-        --destructive: #950e29;
-        --muted: #A4B8C4;
-        --faded: #A68BE5;
-        --elevation: rgba(0, 0, 0, 0.2);
-    }
+  :root {
+    --accent: #3d1e85;
+    --accent-foreground: #ffffff;
+    --background: #fbfbfb;
+    --foreground: #181818;
+    --warning: #f7b32b;
+    --destructive: #950e29;
+    --muted: #a4b8c4;
+    --faded: #a68be5;
+    --elevation: rgba(0, 0, 0, 0.2);
+  }
 
-    .dark {
-        --accent: #5b2dc4;
-        --background: #181818;
-        --foreground: #f2f0f2;
-        --warning: #ffd800;
-        --destructive: #dc143c;
-        --muted: #A4B8C4;
-        --faded: #BFACEC;
-        --elevation: rgba(255, 255, 255, 0.2);
-    }
+  .dark {
+    --accent: #5b2dc4;
+    --accent-foreground: #ffffff;
+    --background: #181818;
+    --foreground: #f2f0f2;
+    --warning: #ffd800;
+    --destructive: #dc143c;
+    --muted: #a4b8c4;
+    --faded: #bfacec;
+    --elevation: rgba(255, 255, 255, 0.2);
+  }
 
-    body {
-        @apply bg-background text-foreground
-    }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
