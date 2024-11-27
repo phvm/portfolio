@@ -8,7 +8,7 @@ const props = defineProps<Props>();
 
 <template>
   <div
-    class="w-fit m-0.5 py-0.5 px-2 rounded-lg bg-accent text-accentForeground transition-all hover:shadow hover:px-3"
+    class="w-fit m-0.5 py-0.5 px-2 rounded-lg bg-accent text-accentForeground transition-all hover:shadow hover:px-3 hover:cursor-default"
   >
     <span>{{ props.skillName }}</span>
   </div>
