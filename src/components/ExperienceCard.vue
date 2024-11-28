@@ -15,9 +15,9 @@ const props = defineProps<Props>();
 
 <template>
   <div
-    class="group flex flex-col items-center justify-center rounded my-3 py-4 shadow border-accent md:items-start md:flex-row hover:bg-elevation hover:shadow-lg hover:-translate-x-1 hover:border-t-[1px] hover:-translate-y-1 transition-all"
+    class="group max-w-[550px] flex flex-col items-center justify-center rounded my-3 py-4 shadow border-accent md:items-start md:flex-row hover:bg-elevation hover:shadow-lg hover:-translate-x-1 hover:border-t-[1px] hover:-translate-y-1 transition-all"
   >
-    <span class="w-1/3 text-center md:text-right group-hover:text-accent group-hover:font-bold"
+    <span class="w-1/3 min-w-40 text-center md:text-right group-hover:text-accent group-hover:font-bold"
       >{{ props.startingDate }} - {{ props.endDate }}</span
     >
     <div class="px-8 md:pl-4 md:pr-6 md:w-2/3">
@@ -25,7 +25,7 @@ const props = defineProps<Props>();
         `${experienceTitle} - ${company}`
       }}</span>
       <p class="my-2">{{ description }}</p>
-      <div class="flex flex-wrap">
+      <div class="flex flex-wrap justify-center md:justify-normal">
         <SkillChip v-for="(skill, index) in skills" :key="index" :skill-name="skill" />
       </div>
     </div>

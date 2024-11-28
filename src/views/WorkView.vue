@@ -5,7 +5,7 @@
       <h3>Front-end Developer</h3>
       <p class="text-center">I've worked with some different teams building responsive, accessible interfaces.</p>
     </aside>
-    <main class="flex flex-col justify-center md:p-10 md:w-3/4 lg:w-2/5">
+    <main class="flex flex-col justify-center items-center md:w-3/5 xl:p-10 lg:items-start">
       <ExperienceCard
         v-for="(experience, index) in experienceList"
         :key="index"
