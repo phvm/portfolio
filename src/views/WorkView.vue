@@ -1,9 +1,17 @@
 <template>
-  <div class="flex flex-col pt-4 justify-center md:justify-end md:flex-row lg:pr-52">
-    <aside class="flex flex-col justify-center items-center p-2 md:w-1/4 lg:fixed lg:left-20">
-      <h2>Pedro Moura</h2>
-      <h3>Front-end Developer</h3>
-      <p class="text-center">I've worked with some different teams building responsive, accessible interfaces.</p>
+    <aside
+      class="transition-all max-w-md h-3/4 border-background border-[1px] ease-in flex flex-col hover:border-accent bg-elevation rounded-lg justify-center items-center p-4 md:w-1/3 md:top-14 md:sticky"
+    >
+      <p class="text-center">
+        Ever since I started my journey 3 years ago, I've worked with wonderful developers to build a vast variety of
+        systems, from data visualization tools to classroom allocation scheduler.
+      </p>
+      <span class="text-accent mt-4">Languages I speak:</span>
+      <p v-for="(language, index) in resume.languages" :key="index">{{ language.name }} - {{ language.level }}</p>
+      <spam class="text-accent mt-4">Developer Tools:</spam>
+      <p v-for="(devTool, index) in resume.devTools" :key="index">{{ devTool }}</p>
+      <span class="text-accent mt-4">Technologies I'm confident with:</span>
+      <p v-for="(technology, index) in resume.technologies" :key="index">{{ technology }}</p>
     </aside>
     <main class="flex flex-col justify-center items-center md:w-3/5 xl:p-10 lg:items-start">
       <ExperienceCard
@@ -22,7 +30,7 @@
 
 <script lang="ts" setup>
 import ExperienceCard from "@/components/ExperienceCard.vue";
-import { experienceList } from "@/constants";
+import { experienceList, resume } from "@/constants";
 </script>
 
 <style scoped></style>

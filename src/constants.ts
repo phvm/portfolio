@@ -1,3 +1,24 @@
+interface Resume {
+  devTools: string[];
+  technologies: string[];
+  languages: { name: string; level: "Beginner" | "Advanced" | "Native" }[];
+}
+
+const resume: Resume = {
+  devTools: ["TailwindCSS", "Figma", "Vite", "Docker", "Vitest", "Cypress", "Git"],
+  technologies: ["HTML", "CSS", "Javascript & Typescript", "Vue", "React", "Next", "Node"],
+  languages: [
+    {
+      name: "Portuguese",
+      level: "Native",
+    },
+    {
+      name: "English",
+      level: "Advanced",
+    },
+  ],
+};
+
 interface NavLink {
   linkTo: string;
   pageTitle: string;
@@ -48,4 +69,4 @@ const experienceList: Experience[] = [
   },
 ];
 
-export { navLinks, experienceList };
+export { navLinks, experienceList, resume };
