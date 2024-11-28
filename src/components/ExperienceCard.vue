@@ -15,7 +15,7 @@ const props = defineProps<Props>();
 
 <template>
   <div
-    class="group max-w-[550px] flex flex-col items-center justify-center rounded my-3 py-4 shadow border-accent md:items-start md:flex-row hover:bg-elevation hover:shadow-lg hover:-translate-x-1 hover:border-t-[1px] hover:-translate-y-1 transition-all"
+    class="transition-all group max-w-[550px] flex flex-col items-center border-t-[1px] border-background justify-center rounded m-3 py-4 shadow hover:border-accent hover:bg-elevation hover:shadow-lg hover:-translate-x-1 hover:-translate-y-1 md:items-start md:flex-row"
   >
     <span class="w-1/3 min-w-40 text-center md:text-right group-hover:text-accent group-hover:font-bold"
       >{{ props.startingDate }} - {{ props.endDate }}</span
