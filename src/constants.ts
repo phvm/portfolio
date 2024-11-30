@@ -53,7 +53,7 @@ const experienceList: Experience[] = [
     experienceTitle: "Software Engineer",
     company: "CInCoders",
     description:
-      "Built full-stack applications for professors, staff and students of the Informatics Center, prototyping and implementing responsive and performant interfaces and components, integrating and developing REST APIs, implementing unit and integration tests. Developing and maintaining the Cinnamon Design System and made it open-source",
+      "Built full-stack applications for professors, staff and students of the Informatics Center, prototyping and implementing responsive and performant interfaces and components, integrating and developing REST APIs, implementing unit and integration tests. Developed and maintained the Cinnamon Design System and made it open-source",
     startingDate: "08/2022",
     endDate: "03/2024",
     skills: ["React", "Typescript", "HTML & CSS", "Next.js", "Storybook", "Vitest", "Playwright", "Figma"],
