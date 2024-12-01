@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,64 +8,63 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+
 }
 
 *:not(i) {
-  font-family: "Geist", sans-serif;
-  font-optical-sizing: auto;
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
 }
 
 *::selection {
-  background-color: var(--accent);
-  color: var(--accent-foreground);
-}
-
-* {
-  margin: 0;
+    background-color: var(--accent);
+    color: var(--accent-foreground);
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+
 }
 
 @layer base {
-  :root {
-    --accent: #3d1e85;
-    --accent-foreground: #ffffff;
-    --background: #fbfbfb;
-    --foreground: #181818;
-    --warning: #f7b32b;
-    --destructive: #950e29;
-    --muted: #a4b8c4;
-    --faded: #a68be5;
-    --elevation: rgba(0, 0, 0, 0);
-  }
+    :root {
+        --accent: #3d1e85;
+        --accent-foreground: #ffffff;
+        --background: #fbfbfb;
+        --foreground: #181818;
+        --warning: #f7b32b;
+        --destructive: #950e29;
+        --muted: #a4b8c4;
+        --faded: #a68be5;
+        --elevation: rgba(0, 0, 0, 0);
+    }
 
-  .dark {
-    --accent: #5b2dc4;
-    --accent-foreground: #ffffff;
-    --background: #181818;
-    --foreground: #f2f0f2;
-    --warning: #ffd800;
-    --destructive: #dc143c;
-    --muted: #a4b8c4;
-    --faded: #bfacec;
-    --elevation: rgba(255, 255, 255, 0.04);
-  }
+    .dark {
+        --accent: #5b2dc4;
+        --accent-foreground: #ffffff;
+        --background: #181818;
+        --foreground: #f2f0f2;
+        --warning: #ffd800;
+        --destructive: #dc143c;
+        --muted: #a4b8c4;
+        --faded: #bfacec;
+        --elevation: rgba(255, 255, 255, 0.04);
+    }
 
-  body {
-    @apply bg-background text-foreground;
-  }
+    body {
+        @apply bg-background text-foreground transition-colors;
+    }
 }
 
 @layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
 
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
