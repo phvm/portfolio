@@ -11,7 +11,7 @@ const props = defineProps<Props>();
 <template>
   <RouterLink
     :to="props.link"
-    class="text-base font-bold underline-offset-2 hover:text-md hover:text-accent transition-all"
+    class="text-base font-bold underline-offset-2 transition-colors duration-300 hover:text-md hover:text-accent"
   >
     <slot />
   </RouterLink>
