@@ -44,16 +44,16 @@ const experienceList: Experience[] = [
     experienceTitle: "Software Developer",
     company: "VTEX-Lab",
     description:
-      "Built and maintained the developers and support portals for VTEX's thousands of users. Implemented functionalities to generate assets like texts, icons and codeblocks through markdown files.",
+      "Built and maintained the developers and support portals for VTEX's thousands of users. Implemented functionalities to statically generate assets like texts, icons and codeblocks through markdown files.",
     startingDate: "03/2024",
     endDate: "Present",
-    skills: ["React", "Typescript", "NextJS"],
+    skills: ["HTML & CSS", "React", "Typescript", "NextJS", "SSR", "SSG"],
   },
   {
     experienceTitle: "Software Engineer",
     company: "CInCoders",
     description:
-      "Built full-stack applications for professors, staff and students of the Informatics Center, prototyping and implementing responsive and performant interfaces and components, integrating and developing REST APIs, implementing unit and integration tests. Developed and maintained the Cinnamon Design System and made it open-source",
+      "Built full-stack applications for professors, staff and students of the Informatics Center, prototyping and implementing responsive and performant interfaces and components, integrating and developing REST APIs and implementing unit and integration tests. Developed and maintained the Cinnamon Design System and made it open-source",
     startingDate: "08/2022",
     endDate: "03/2024",
     skills: ["React", "Typescript", "HTML & CSS", "Next.js", "Storybook", "Vitest", "Playwright", "Figma"],
