@@ -37,7 +37,6 @@ body {
         --warning: #f7b32b;
         --destructive: #950e29;
         --muted: #a4b8c4;
-        --faded: #a68be5;
         --elevation: rgba(0, 0, 0, 0);
     }
 
@@ -49,7 +48,6 @@ body {
         --warning: #ffd800;
         --destructive: #dc143c;
         --muted: #a4b8c4;
-        --faded: #bfacec;
         --elevation: rgba(255, 255, 255, 0.04);
     }
 
