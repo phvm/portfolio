@@ -19,16 +19,16 @@ const resume: Resume = {
   ],
 };
 
-interface NavLink {
-  linkTo: string;
-  pageTitle: string;
+interface NavLinks {
+  [key: string]: { link: string; name: string };
 }
 
-const navLinks: NavLink[] = [
-  { linkTo: "/projects", pageTitle: "Projects I've built" },
-  { linkTo: "/work", pageTitle: "Some of my experiences" },
-  { linkTo: "/contact", pageTitle: "Contact me" },
-];
+const navLinks: NavLinks = {
+  home: { link: "/", name: "home" },
+  projects: { link: "/projects", name: "projects" },
+  experiences: { link: "/experiences", name: "experiences" },
+  contact: { link: "/contact", name: "contact" },
+};
 
 interface Experience {
   experienceTitle: string;
@@ -69,4 +69,22 @@ const experienceList: Experience[] = [
   },
 ];
 
-export { navLinks, experienceList, resume };
+const NavbarLinks = [
+  {
+    link: "/",
+    icon: "material-symbols:person",
+    title: "Home",
+  },
+  {
+    link: "/projects",
+    icon: "heroicons-outline:light-bulb",
+    title: "Projects",
+  },
+  {
+    link: "/experiences",
+    icon: "quill:paper",
+    title: "Experiences",
+  },
+];
+
+export { navLinks, experienceList, resume, NavbarLinks };
