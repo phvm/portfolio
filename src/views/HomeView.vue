@@ -1,27 +1,25 @@
 <template>
-  <main class="flex flex-col px-2">
-    <h1 class="text-xl font-bold md:text-3xl text-left w-full">Pedro Moura</h1>
-    <h2 class="my-4 text-lg md:w-2/3">
+  <main class="flex flex-col mx-auto px-2 lg:p-12 lg:w-1/2">
+    <h1 class="text-xl fo font-bold text-left mb-3 md:text-4xl">Pedro Moura</h1>
+    <h2 class="my-2 text-lg font-medium">
       Hey, I'm Pedro Moura, I'm a software developer specialized in
       <strong class="text-accent">front-end development.</strong>
     </h2>
-    <p>
+    <p class="my-2 text-base/7">
       My favorite work is to build software that looks great, is accessible to everyone and is blazing fast,
-      meticulously crafting with accessibility, responsiveness and performance in mind.
-    </p>
-    <p>
+      meticulously crafting with accessibility, responsiveness and performance in mind. <br />
       You can see some
       <NavigationLink :link="navLinks.projects.link">projects I've already built</NavigationLink>
-      (sometimes with wonderful people) or if you're curious about my past as a software developer,
+      (sometimes with wonderful people) or if you're curious about my past experiences as a software developer,
       <NavigationLink :link="navLinks.experiences.link"> you can go here.</NavigationLink>
     </p>
 
     <div class="flex items-center mt-6 justify-between px-2">
       <nav class="flex">
-        <a href="https://github.com/phvm" rel="noopener noreferrer" target="_blank">
+        <a class="mr-4" href="https://github.com/phvm" rel="noopener noreferrer" target="_blank">
           <Icon class="text-3xl" icon="iconoir:github" />
         </a>
-        <a href="https://linkedin.com/in/-pedromoura/" rel="noopener noreferrer" target="_blank">
+        <a class="mx-4" href="https://linkedin.com/in/-pedromoura/" rel="noopener noreferrer" target="_blank">
           <Icon class="text-3xl" icon="mdi:linkedin" />
         </a>
       </nav>

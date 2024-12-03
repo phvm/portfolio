@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { RouterLink } from "vue-router";
-import { onMounted, onUnmounted, ref, watch } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
 interface Props {
   link: string;
@@ -23,9 +23,9 @@ const { link, title } = defineProps<Props>();
 </script>
 
 <template>
-  <RouterLink :to="link" class="mx-1">
+  <RouterLink :to="link" class="mx-1 md:mx-3 transition-all active:translate-y-2">
     <button class="flex items-center">
-      <slot v-if="!isMobile" class="active:translate-x-2" />
+      <slot v-if="!isMobile" />
       {{ title }}
     </button>
   </RouterLink>

@@ -14,7 +14,7 @@ function changeColorMode() {
 </script>
 
 <template>
-  <button class="text-xl p-[2px]" @click.prevent="changeColorMode">
+  <button class="text-lg py-[2px] px-2" @click.prevent="changeColorMode">
     <Transition mode="out-in">
       <Icon v-if="isLightMode" icon="iconoir:sun-light" />
       <Icon v-else icon="iconoir:half-moon" />
