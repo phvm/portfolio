@@ -12,8 +12,7 @@ export default {
       muted: "var(--muted)",
       warning: "var(--warning)",
       destructive: "var(--destructive)",
-      elevation: "var(--elevation)",
-      faded: "var(--faded)",
+      elevation: "var(--elevation)"
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],
