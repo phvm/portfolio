@@ -72,7 +72,7 @@ const experienceList: Experience[] = [
 const NavbarLinks = [
   {
     link: "/",
-    icon: "material-symbols:person",
+    icon: "charm:person",
     title: "Home",
   },
   {

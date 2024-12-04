@@ -18,8 +18,8 @@
     <span class="mt-6 mb-2">Find me or come say hi on</span>
     <div class="flex items-center justify-between px-2">
       <nav class="flex">
-        <SocialLinks icon="iconoir:github" title="Github" />
-        <SocialLinks icon="mdi:linkedin" title="LinkedIn" />
+        <SocialLinks icon="iconoir:github" link="https://github.com/phvm" title="Github" />
+        <SocialLinks icon="mdi:linkedin" link="https://linkedin.com/in/-pedromoura" title="LinkedIn" />
       </nav>
 
       <a
