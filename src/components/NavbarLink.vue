@@ -23,8 +23,8 @@ const { link, title } = defineProps<Props>();
 </script>
 
 <template>
-  <RouterLink :to="link" class="mx-1 md:mx-3 transition-all active:translate-y-2">
-    <button class="flex items-center">
+  <RouterLink :to="link" class="group mx-1 md:px-3 md:py-1">
+    <button class="flex items-center transition-all group-active:translate-y-1">
       <slot v-if="!isMobile" />
       {{ title }}
     </button>

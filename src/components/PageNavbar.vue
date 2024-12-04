@@ -13,7 +13,7 @@ const links = computed(() => {
 </script>
 
 <template>
-  <nav class="flex justify-evenly p-8 mb-4 md:px-6 md:justify-end">
+  <nav class="flex justify-evenly p-8 md:px-6 md:justify-end">
     <NavbarLink v-for="(navbarLink, index) in links" :key="index" :link="navbarLink.link" :title="navbarLink.title">
       <Icon :icon="navbarLink.icon" class="text-lg" />
     </NavbarLink>
