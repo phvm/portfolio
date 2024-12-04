@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import { RouterLink } from "vue-router";
 import { onMounted, onUnmounted, ref } from "vue";
+import { Icon } from "@iconify/vue";
 
 interface Props {
   link: string;
   title: string;
+  icon: string;
 }
 
 const mobileSize = 640;
@@ -19,13 +21,13 @@ onUnmounted(() => {
   window.removeEventListener("resize", calculateWidth);
 });
 
-const { link, title } = defineProps<Props>();
+const { link, title, icon } = defineProps<Props>();
 </script>
 
 <template>
   <RouterLink :to="link" class="group mx-1 md:px-3 md:py-1">
     <button class="flex items-center transition-all group-active:translate-y-1">
-      <slot v-if="!isMobile" />
+      <Icon :icon :v-if="!isMobile" class="text-xl mx-0.5" />
       {{ title }}
     </button>
   </RouterLink>
