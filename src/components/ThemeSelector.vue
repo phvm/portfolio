@@ -1,16 +1,8 @@
 <script lang="ts" setup>
-import { ref, watchEffect } from "vue";
 import { Icon } from "@iconify/vue";
+import useTheme from "@/utils/useTheme";
 
-const isLightMode = ref(true);
-
-watchEffect(() =>
-  isLightMode.value ? document.documentElement.classList.remove("dark") : document.documentElement.classList.add("dark")
-);
-
-function changeColorMode() {
-  isLightMode.value = !isLightMode.value;
-}
+const [isLightMode, changeColorMode] = useTheme();
 </script>
 
 <template>
