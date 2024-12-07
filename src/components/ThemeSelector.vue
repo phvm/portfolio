@@ -2,7 +2,7 @@
 import { Icon } from "@iconify/vue";
 import useTheme from "@/utils/useTheme";
 
-const [isLightMode, changeColorMode] = useTheme();
+const { isLightMode, changeColorMode } = useTheme();
 </script>
 
 <template>

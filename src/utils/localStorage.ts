@@ -10,5 +10,5 @@ export default function useLocalStorage<itemType>(key: string) {
     return JSON.parse(<string>item);
   }
 
-  return [getItem, saveItem] as const;
+  return { getItem, saveItem } as const;
 }

@@ -3,13 +3,13 @@ import useLocalStorage from "@/utils/localStorage";
 
 export default function useTheme() {
   const isLightMode = ref<boolean | null>();
-  const [getItem, setItem] = useLocalStorage<boolean>("mode");
+  const { getItem, saveItem } = useLocalStorage<boolean>("mode");
 
   isLightMode.value = getItem();
 
   function changeColorMode() {
     isLightMode.value = !isLightMode.value;
-    setItem(isLightMode.value);
+    saveItem(isLightMode.value);
   }
 
   watchEffect(() =>
@@ -18,5 +18,5 @@ export default function useTheme() {
     : document.documentElement.classList.add("dark")
   );
 
-  return [isLightMode, changeColorMode] as const;
+  return { isLightMode, changeColorMode } as const;
 }
