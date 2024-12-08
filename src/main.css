@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +14,7 @@
 }
 
 *:not(i) {
-    font-family: "Geist", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
 }
 
@@ -31,10 +31,11 @@ body {
 
 @layer base {
     :root {
-        --accent: #3d1e85;
-        --accent-foreground: #ffffff;
+        --accent: #121212;
+        --accent-foreground: #f2f0f2;
         --background: #fbfbfb;
-        --foreground: #181818;
+        --foreground: #555555;
+        --foreground-deep: #000000;
         --warning: #f7b32b;
         --destructive: #950e29;
         --muted: #a4b8c4;
@@ -42,10 +43,11 @@ body {
     }
 
     .dark {
-        --accent: #5b2dc4;
-        --accent-foreground: #ffffff;
-        --background: #181818;
-        --foreground: #f2f0f2;
+        --accent: #f2f0f2;
+        --accent-foreground: #121212;
+        --background: #080808;
+        --foreground: #bbbbbb;
+        --foreground-deep: #ffffff;
         --warning: #ffd800;
         --destructive: #dc143c;
         --muted: #a4b8c4;

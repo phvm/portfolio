@@ -26,7 +26,7 @@ const { link, title, icon } = defineProps<Props>();
 
 <template>
   <RouterLink :to="link" class="group mx-1 md:px-3 md:py-1">
-    <button class="flex items-center transition-all group-active:translate-y-1">
+    <button class="flex items-center transition-all group-active:translate-y-1.5">
       <Icon :icon :v-if="!isMobile" class="text-xl mx-0.5" />
       {{ title }}
     </button>
