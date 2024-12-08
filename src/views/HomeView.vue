@@ -5,17 +5,22 @@
       Hey, I'm Pedro Moura, I'm a software developer specialized in
       <strong class="text-accent">front-end development.</strong>
     </h2>
-    <p class="my-2 text-base/7">
+    <InnerText>
       My favorite work is to build software that looks great, is accessible to everyone and is blazing fast,
       meticulously crafting with accessibility, responsiveness and performance in mind.
-    </p>
-    <p class="my-4 text-base/7">
+    </InnerText>
+    <InnerText>
       You can see some
       <NavigationLink :link="navLinks.projects.link">projects I've already built</NavigationLink>
       (sometimes with wonderful people) or if you're curious about my experiences history as a software developer,
       <NavigationLink :link="navLinks.experiences.link"> you can go here.</NavigationLink>
-    </p>
-    <span class="mt-6 mb-2">Find me or come say hi on</span>
+    </InnerText>
+    <InnerText>
+      Outside of coding and building software, my other hobbies include playing video games and cooking. I'm a
+      experimentalist by nature. I feel trilled to try new things, be it a new technology, a new flavor of my favorite
+      drink or a new way to cook my favorite dish.
+    </InnerText>
+    <span class="mt-10 mb-2">Find me or come say hi on</span>
     <div class="flex items-center justify-between px-2">
       <nav class="flex">
         <SocialLinks icon="iconoir:github" link="https://github.com/phvm" title="Github" />
@@ -23,7 +28,7 @@
       </nav>
 
       <a
-        class="border-2 p-1 rounded-md bg-accent border-foreground text-accentForeground"
+        class="p-2 rounded-md bg-accent border-foreground font-medium text-accentForeground"
         download="cv"
         href="public/Currículo.pdf"
       >
@@ -37,5 +42,6 @@
 import NavigationLink from "@/components/NavigationLink.vue";
 import SocialLinks from "@/components/SocialLinks.vue";
 import PageTitle from "@/components/PageTitle.vue";
+import InnerText from "@/components/InnerText.vue";
 import { navLinks } from "@/constants";
 </script>
