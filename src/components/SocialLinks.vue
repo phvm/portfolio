@@ -13,7 +13,7 @@ const { icon, title } = defineProps<Props>();
 <template>
   <a
     :href="link"
-    class="mr-4 flex items-end border-b-2 transition-colors duration-300 hover:border-accent"
+    class="mr-4 flex items-end border-b-2 transition-colors duration-300 hover:border-accent hover:text-accent"
     rel="noopener noreferrer"
     target="_blank"
   >

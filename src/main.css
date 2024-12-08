@@ -33,12 +33,11 @@ body {
     :root {
         --accent: #121212;
         --accent-foreground: #f2f0f2;
-        --background: #fbfbfb;
+        --background: #fcfcfc;
         --foreground: #555555;
         --foreground-deep: #000000;
         --warning: #f7b32b;
         --destructive: #950e29;
-        --muted: #a4b8c4;
         --elevation: rgba(0, 0, 0, 0);
     }
 
@@ -50,7 +49,6 @@ body {
         --foreground-deep: #ffffff;
         --warning: #ffd800;
         --destructive: #dc143c;
-        --muted: #a4b8c4;
         --elevation: rgba(255, 255, 255, 0.04);
     }
 

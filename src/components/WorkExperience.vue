@@ -16,8 +16,8 @@ const { experienceTitle, company, description, startingDate, endDate, skills } =
 <template>
   <div class="my-8">
     <div class="w-full flex flex-col items-center mb-3 md:flex-row md:justify-between">
-      <span class="font-semibold">{{ startingDate }} - {{ endDate }}</span>
-      <span class="font-semibold">{{ experienceTitle }} @ {{ company }}</span>
+      <span class="font-semibold text-foregroundDeep">{{ startingDate }} - {{ endDate }}</span>
+      <span class="font-semibold text-foregroundDeep">{{ experienceTitle }} @ {{ company }}</span>
     </div>
     <p class="text-base/6">{{ description }}</p>
     <span class="mt-3 mb-1 inline-block">Skills I developed</span>

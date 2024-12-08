@@ -10,7 +10,6 @@ export default {
       background: "var(--background)",
       foreground: "var(--foreground)",
       foregroundDeep: "var(--foreground-deep)",
-      muted: "var(--muted)",
       warning: "var(--warning)",
       destructive: "var(--destructive)",
       elevation: "var(--elevation)",
