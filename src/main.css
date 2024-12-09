@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+*:not(i) {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+*::selection {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility
+}
+
+@layer base {
+    :root {
+        --accent: #121212;
+        --accent-foreground: #f2f0f2;
+        --background: #fcfcfc;
+        --foreground: #555555;
+        --foreground-deep: #000000;
+        --warning: #f7b32b;
+        --destructive: #950e29;
+        --elevation: rgba(0, 0, 0, 0);
+    }
+
+    .dark {
+        --accent: #f2f0f2;
+        --accent-foreground: #121212;
+        --background: #080808;
+        --foreground: #bbbbbb;
+        --foreground-deep: #ffffff;
+        --warning: #ffd800;
+        --destructive: #dc143c;
+        --elevation: rgba(255, 255, 255, 0.04);
+    }
+
+    body {
+        @apply bg-background text-foreground transition-colors;
+    }
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
