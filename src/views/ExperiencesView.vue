@@ -5,7 +5,7 @@ import { experienceList } from "@/constants";
 </script>
 
 <template>
-  <main class="px-4 mx-auto lg:w-1/2">
+  <main class="px-7 py-10 mx-auto max-w-3xl">
     <PageTitle title="My history" />
     <WorkExperience
       v-for="(experience, index) in experienceList"

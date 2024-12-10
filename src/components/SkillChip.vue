@@ -7,11 +7,10 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <div
+  <span
     class="w-fit m-0.5 py-0.5 px-2 font-medium rounded-lg bg-accent text-accentForeground transition-all hover:shadow hover:px-3 hover:cursor-default"
+    >{{ props.skillName }}</span
   >
-    <span>{{ props.skillName }}</span>
-  </div>
 </template>
 
 <style scoped></style>

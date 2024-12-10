@@ -28,7 +28,7 @@ const { link, title, icon } = defineProps<Props>();
   <RouterLink :to="link" class="group mx-1 md:px-3 md:py-1 text-foreground transition-colors hover:text-foregroundDeep">
     <button class="flex items-center transition-all group-active:translate-y-1.5">
       <Icon :icon :v-if="!isMobile" class="text-xl mx-0.5" />
-      {{ title }}
+      {{ title.charAt(0).toUpperCase() + title.slice(1) }}
     </button>
   </RouterLink>
 </template>
