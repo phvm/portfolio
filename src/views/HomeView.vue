@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col mx-auto px-4 lg:p-12 lg:w-1/2">
+  <main class="max-w-3xl mx-auto py-10 px-7">
     <PageTitle title="Pedro Moura" />
     <h2 class="my-2 text-lg font-medium">
       Hey, I'm Pedro Moura, I'm a software developer specialized in
@@ -20,7 +20,7 @@
       experimentalist by nature. I feel trilled to try new things, be it a new technology, a new flavor of my favorite
       drink or a new way to cook my favorite dish.
     </InnerText>
-    <span class="mt-10 mb-2">Find me or come say hi on</span>
+    <span class="mt-10 mb-2 inline-block">Find me or come say hi on</span>
     <div class="flex items-center justify-between px-2">
       <nav class="flex">
         <SocialLinks icon="iconoir:github" link="https://github.com/phvm" title="Github" />
