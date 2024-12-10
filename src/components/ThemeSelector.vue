@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
-import useTheme from "@/utils/useTheme";
+import useTheme from "@/composables/useTheme";
 
 const { isLightMode, changeColorMode } = useTheme();
 </script>
