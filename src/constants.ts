@@ -19,17 +19,6 @@ const resume: Resume = {
   ],
 };
 
-interface NavLinks {
-  [key: string]: { link: string; name: string };
-}
-
-const navLinks: NavLinks = {
-  home: { link: "/", name: "home" },
-  projects: { link: "/projects", name: "projects" },
-  experiences: { link: "/experiences", name: "experiences" },
-  contact: { link: "/contact", name: "contact" },
-};
-
 interface Experience {
   experienceTitle: string;
   description: string;
@@ -69,21 +58,31 @@ const experienceList: Experience[] = [
   },
 ];
 
+interface NavLinks {
+  [key: string]: { link: string; name: string };
+}
+
+const navLinks: NavLinks = {
+  home: { link: "/", name: "home" },
+  projects: { link: "/projects", name: "projects" },
+  experiences: { link: "/experiences", name: "experiences" },
+};
+
 const NavbarLinks = [
   {
-    link: "/",
+    link: navLinks.home.link,
     icon: "charm:person",
-    title: "Home",
+    title: navLinks.home.name,
   },
   {
-    link: "/projects",
+    link: navLinks.projects.link,
     icon: "heroicons-outline:light-bulb",
-    title: "Projects",
+    title: navLinks.projects.name,
   },
   {
-    link: "/experiences",
+    link: navLinks.experiences.link,
     icon: "quill:paper",
-    title: "Experiences",
+    title: navLinks.experiences.name,
   },
 ];
 
