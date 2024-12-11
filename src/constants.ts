@@ -86,4 +86,6 @@ const NavbarLinks = [
   },
 ];
 
+const projects = [{ name: "Kaball", link: "https://github.com/Remato/kaball" }];
+
 export { navLinks, experienceList, resume, NavbarLinks };
