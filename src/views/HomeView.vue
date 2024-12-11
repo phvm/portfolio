@@ -30,7 +30,7 @@
       <a
         class="p-2 rounded-md bg-accent border-foreground font-medium text-accentForeground"
         download="pedro_moura_cv"
-        href="/Curriculo.pdf"
+        href="/pedro_moura_CV.pdf"
       >
         <button>Download my CV</button>
       </a>
