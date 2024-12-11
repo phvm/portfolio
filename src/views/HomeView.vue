@@ -29,7 +29,7 @@
 
       <a
         class="p-2 rounded-md bg-accent border-foreground font-medium text-accentForeground"
-        download="cv"
+        download="cv.pdf"
         href="../../assets/Curriculo.pdf"
       >
         <button>Download my CV</button>
