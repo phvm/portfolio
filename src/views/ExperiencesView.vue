@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import PageTitle from "@/components/PageTitle.vue";
-import WorkExperience from "@/components/WorkExperience.vue";
+import WorkExperience from "@/components/ExperienceCard.vue";
 import { experienceList } from "@/constants";
 </script>
 
