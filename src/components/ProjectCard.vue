@@ -1,6 +1,8 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { Icon } from "@iconify/vue";
+
+import ExternalLink from "@/components/ExternalLink.vue";
 
 interface Props {
   title: string;
@@ -10,18 +12,21 @@ interface Props {
   technologies: string[];
 }
 
-const { title, summary, repoLink, description } = defineProps<Props>();
+const { title, summary, repoLink, description, technologies } = defineProps<Props>();
 const isOpen = ref<boolean>(false);
+const concatedTechonologies = computed(() => {
+  return technologies.join(", ");
+});
 </script>
 
 <template>
   <div
     :class="isOpen ? ['bg-elevation', 'shadow-md'] : null"
-    class="group p-4 rounded-md bg-transparent shadow-none transition-all duration-300 hover:shadow-md hover:bg-elevation"
+    class="group max-h-96 my-4 p-4 rounded-md bg-transparent shadow-none transition-all duration-300 hover:shadow-md hover:bg-elevation"
   >
     <span
-      :class="isOpen ? ['text-accent', 'font-medium'] : null"
-      class="inline-block mb-2 transition-all duration-300 group-hover:text-accent group-hover:font-medium"
+      :class="isOpen ? ['text-accent', 'font-semibold'] : null"
+      class="inline-block mb-2 transition-all duration-300 group-hover:text-accent group-hover:font-semibold"
       >{{ title }}</span
     >
     <p>{{ summary }}</p>
@@ -35,11 +40,12 @@ const isOpen = ref<boolean>(false);
     </div>
     <Transition>
       <div v-if="isOpen">
-        <a>{{ repoLink }}</a>
-        <span>{{ description }}</span>
+        <p>{{ description }}</p>
+        <p class="my-4 font-medium text-accent">Technologies: {{ concatedTechonologies }}</p>
+        <div class="flex justify-end">
+          <ExternalLink :link="repoLink" title="Repository" />
+        </div>
       </div>
     </Transition>
   </div>
 </template>
-
-<style scoped></style>

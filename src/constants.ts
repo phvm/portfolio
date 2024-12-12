@@ -86,6 +86,57 @@ const NavbarLinks = [
   },
 ];
 
-const projects = [{ name: "Kaball", link: "https://github.com/Remato/kaball" }];
+interface project {
+  title: string;
+  summary: string;
+  repoLink: string;
+  description: string;
+  technologies: string[];
+}
 
-export { navLinks, experienceList, resume, NavbarLinks };
+const projects: project[] = [
+  {
+    title: "Portfolio",
+    summary: "A minimalistic, accessibility focused, personal website",
+    repoLink: "https://github.com/phvm/portfolio",
+    description: "",
+    technologies: ["Vue", "Typescript", "TailwindCSS", "HTML", "CSS"],
+  },
+  {
+    title: "Bookboard",
+    summary: "A dashboard for book search with charts based on book categories ratings built for accessibility",
+    repoLink: "https://github.com/phvm/bookboard",
+    description: "",
+    technologies: ["React", "Typescript", "MaterialUI", "HTML", "CSS"],
+  },
+  {
+    title: "Kaball",
+    summary: "A self balancing class scheduler to reduce students stress",
+    repoLink: "https://github.com/Remato/kaball",
+    description: "",
+    technologies: ["React", "Typescript", "HTML", "CSS"],
+  },
+  {
+    title: "Todo",
+    summary: "A minimalistic, dark-mode capable, to-do list",
+    repoLink: "https://github.com/phvm/Todo",
+    description: "",
+    technologies: ["Vue", "HTML", "CSS", "Typescript", "Vite"],
+  },
+  {
+    title: "Linkthree",
+    summary: "A minimal link tree with exactly three links to my socials",
+    repoLink: "https://github.com/phvm/linkTree",
+    description: "",
+    technologies: ["HTML", "CSS"],
+  },
+  {
+    title: "Reconectando",
+    summary: "A electric grid mapper to detect fail points using Dijkstra algorithm",
+    repoLink: "https://github.com/phvm/Reconectando",
+    description: "",
+    technologies: ["Python", "Heroku", "Streamlit"],
+  },
+];
+
+export { navLinks, experienceList, resume, NavbarLinks, projects };

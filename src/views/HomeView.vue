@@ -23,8 +23,8 @@
     <span class="mt-10 mb-2 inline-block">Find me or come say hi on</span>
     <div class="flex items-center justify-between px-2">
       <nav class="flex">
-        <SocialLinks icon="iconoir:github" link="https://github.com/phvm" title="Github" />
-        <SocialLinks icon="mdi:linkedin" link="https://linkedin.com/in/-pedromoura" title="LinkedIn" />
+        <ExternalLink icon="iconoir:github" link="https://github.com/phvm" title="Github" />
+        <ExternalLink icon="mdi:linkedin" link="https://linkedin.com/in/-pedromoura" title="LinkedIn" />
       </nav>
 
       <a
@@ -40,7 +40,7 @@
 
 <script lang="ts" setup>
 import NavigationLink from "@/components/NavigationLink.vue";
-import SocialLinks from "@/components/SocialLinks.vue";
+import ExternalLink from "@/components/ExternalLink.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import InnerText from "@/components/InnerText.vue";
 import { navLinks } from "@/constants";
