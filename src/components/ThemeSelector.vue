@@ -2,14 +2,18 @@
 import { Icon } from "@iconify/vue";
 import useTheme from "@/composables/useTheme";
 
-const { isLightMode, changeColorMode } = useTheme();
+const { isDarkMode, changeColorMode } = useTheme();
 </script>
 
 <template>
-  <button class="text-lg py-[2px] px-2 transition-colors hover:text-foregroundDeep" @click.prevent="changeColorMode">
+  <button
+    class="text-lg py-[2px] px-2 transition-colors hover:text-foregroundDeep"
+    type="button"
+    @click.prevent="changeColorMode"
+  >
     <Transition mode="out-in">
-      <Icon v-if="isLightMode" icon="iconoir:sun-light" />
-      <Icon v-else icon="iconoir:half-moon" />
+      <Icon v-if="isDarkMode" icon="iconoir:half-moon" />
+      <Icon v-else icon="iconoir:sun-light" />
     </Transition>
   </button>
 </template>

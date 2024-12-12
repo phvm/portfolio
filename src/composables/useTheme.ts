@@ -2,21 +2,23 @@ import { ref, watchEffect } from "vue";
 import useLocalStorage from "@/utils/localStorage";
 
 export default function useTheme() {
-  const isLightMode = ref<boolean | null>();
-  const { getItem, saveItem } = useLocalStorage<boolean>("mode");
+  const isDarkMode = ref<boolean | null>();
+  const { getItem, saveItem } = useLocalStorage<boolean>("darkMode");
 
-  isLightMode.value = getItem();
+  const prefersDarkMode: boolean = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const localStorageMode = getItem();
+  isDarkMode.value = localStorageMode ?? prefersDarkMode;
 
-  function changeColorMode() {
-    isLightMode.value = !isLightMode.value;
-    saveItem(isLightMode.value);
+  function changeColorMode(): void {
+    isDarkMode.value = !isDarkMode.value;
+    saveItem(isDarkMode.value);
   }
 
   watchEffect(() =>
-    isLightMode.value ?
-      document.documentElement.classList.remove("dark")
-    : document.documentElement.classList.add("dark")
+    isDarkMode.value ?
+      document.documentElement.classList.add("dark")
+    : document.documentElement.classList.remove("dark")
   );
 
-  return { isLightMode, changeColorMode } as const;
+  return { isDarkMode, changeColorMode } as const;
 }
