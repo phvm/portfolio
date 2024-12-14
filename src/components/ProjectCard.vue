@@ -22,11 +22,11 @@ const concatedTechonologies = computed(() => {
 <template>
   <div
     :class="isOpen ? ['bg-elevation', 'shadow-md'] : null"
-    class="group max-h-96 my-4 p-4 rounded-md bg-transparent shadow-none transition-all duration-300 hover:shadow-md hover:bg-elevation"
+    class="group/card max-h-96 my-4 p-4 rounded-md bg-transparent shadow-none transition-all duration-300 hover:shadow-md hover:bg-elevation"
   >
     <span
       :class="isOpen ? ['text-accent', 'font-semibold'] : null"
-      class="inline-block mb-2 transition-all duration-300 group-hover:text-accent group-hover:font-semibold"
+      class="inline-block mb-2 transition-all duration-300 group-hover/card:text-accent group-hover/card:font-semibold"
       >{{ title }}</span
     >
     <p>{{ summary }}</p>
