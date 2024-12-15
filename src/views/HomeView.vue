@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-3xl mx-auto py-10 px-7">
+  <main class="max-w-3xl mx-auto py-5 px-7">
     <PageTitle title="Pedro Moura" />
     <h2 class="my-2 text-lg font-medium">
       Hey, I'm Pedro Moura, I'm a software developer specialized in
@@ -20,15 +20,15 @@
       experimentalist by nature. I feel trilled to try new things, be it a new technology, a new flavor of my favorite
       drink or a new way to cook my favorite dish.
     </InnerText>
-    <span class="mt-10 mb-2 inline-block">Find me or come say hi on</span>
-    <div class="flex items-center justify-between px-2">
-      <nav class="flex">
+    <p class="mt-6 inline-block">Find me or come say hi on</p>
+    <div class="flex flex-col justify-between md:flex-row md:items-center">
+      <nav class="flex my-4">
         <ExternalLink icon="iconoir:github" link="https://github.com/phvm" title="Github" />
         <ExternalLink icon="mdi:linkedin" link="https://linkedin.com/in/-pedromoura" title="LinkedIn" />
       </nav>
 
       <a
-        class="p-2 rounded-md bg-foregroundDeep font-semibold text-background transition-all duration-300 hover:bg-foregroundDeeper hover:scale-[102%]"
+        class="p-2 my-4 rounded-md bg-foregroundDeep font-semibold text-background transition-all duration-300 hover:bg-foregroundDeeper hover:scale-[102%]"
         download="pedro_moura_cv"
         href="/pedro_moura_CV.pdf"
       >

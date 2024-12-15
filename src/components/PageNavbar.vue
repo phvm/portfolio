@@ -8,7 +8,7 @@ const activeRoute = useRoute();
 </script>
 
 <template>
-  <nav class="flex justify-evenly p-8 md:px-6 md:justify-end">
+  <nav class="flex justify-around p-6 md:px-6 md:justify-end">
     <NavbarLink
       v-for="(navbarLink, index) in NavbarLinks"
       :key="index"

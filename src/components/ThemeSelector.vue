@@ -9,8 +9,10 @@ const { isDarkMode, changeColorMode } = useTheme();
   <button class="text-xl py-[2px] px-2 hover:text-foregroundDeeper" type="button" @click.prevent="changeColorMode">
     <Transition
       class="transition-all"
-      enter-from-class="opacity-0 duration-200 ease-in"
-      leave-to-class="opacity-0 duration-200 ease-out"
+      enter-active-class="duration-200 ease-in"
+      enter-from-class="opacity-0"
+      leave-active-class="duration-200 ease-out"
+      leave-to-class="opacity-0"
       mode="out-in"
     >
       <Icon v-if="isDarkMode" icon="iconoir:half-moon" />

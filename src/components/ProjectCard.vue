@@ -21,8 +21,8 @@ const concatedTechonologies = computed(() => {
 
 <template>
   <div
-    :class="isOpen ? ['bg-elevation', 'shadow'] : null"
-    class="group/card border-[1px] border-muted max-h-96 my-4 p-4 rounded-md bg-transparent shadow-none transition-all duration-300 hover:shadow hover:bg-elevation"
+    :class="isOpen ? ['shadow', 'bg-elevation'] : ['bg-transparent']"
+    class="group/card border-[1px] border-muted max-h-96 my-4 p-4 rounded-md transition-all duration-300 hover:shadow hover:bg-elevation"
   >
     <span
       :class="isOpen ? ['text-foregroundDeeper', 'font-semibold'] : null"
