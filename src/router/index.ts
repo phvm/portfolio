@@ -11,6 +11,9 @@ const router = createRouter({
     { name: navLinks.experiences.name, path: navLinks.experiences.link, component: ExperiencesView },
     { name: navLinks.projects.name, path: navLinks.projects.link, component: ProjectsView },
   ],
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;
