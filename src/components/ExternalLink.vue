@@ -13,7 +13,7 @@ defineProps<Props>();
 <template>
   <a
     :href="link"
-    class="w-fit group/links mr-4 flex items-end border-b-2 transition-colors duration-300 hover:border-accent hover:text-accent"
+    class="w-fit group/links mr-4 text-foregroundDeep font-medium flex items-end border-b-2 transition-colors duration-300 hover:border-accent hover:text-foregroundDeeper"
     rel="noopener noreferrer"
     target="_blank"
   >

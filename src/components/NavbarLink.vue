@@ -29,7 +29,7 @@ const { link, title, icon } = defineProps<Props>();
     :to="link"
     class="group/navlink mx-1 md:px-3 md:py-1 text-foreground transition-colors hover:text-foregroundDeep"
   >
-    <button class="flex items-center transition-all group-active/navlink:translate-y-1.5">
+    <button class="flex items-center font-medium transition-all group-active/navlink:translate-y-1.5">
       <Icon :icon :v-if="!isMobile" class="text-xl mx-0.5" />
       {{ title.charAt(0).toUpperCase() + title.slice(1) }}
     </button>

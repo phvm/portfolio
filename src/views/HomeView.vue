@@ -28,7 +28,7 @@
       </nav>
 
       <a
-        class="p-2 rounded-md bg-accent border-foreground font-medium text-accentForeground"
+        class="p-2 rounded-md bg-foregroundDeep font-semibold text-background transition-transform duration-300 hover:bg-foregroundDeeper"
         download="pedro_moura_cv"
         href="/pedro_moura_CV.pdf"
       >

@@ -19,8 +19,8 @@
 }
 
 *::selection {
-    background-color: var(--accent);
-    color: var(--accent-foreground);
+    background-color: var(--foreground-deeper);
+    color: var(--background);
 }
 
 body {
@@ -31,25 +31,25 @@ body {
 
 @layer base {
     :root {
-        --accent: #121212;
-        --accent-foreground: #f2f0f2;
-        --background: #fcfcfc;
         --foreground: #555555;
-        --foreground-deep: #000000;
+        --foreground-deep: #242424;
+        --foreground-deeper: #000000;
+        --background: #fcfcfc;
+        --elevation: rgba(0, 0, 0, 0);
         --warning: #f7b32b;
         --destructive: #950e29;
-        --elevation: rgba(0, 0, 0, 0);
+        --muted: rgba(0, 0, 0, 0.15)
     }
 
     .dark {
-        --accent: #f2f0f2;
-        --accent-foreground: #121212;
-        --background: #080808;
         --foreground: #bbbbbb;
-        --foreground-deep: #ffffff;
+        --foreground-deep: #eeeeee;
+        --foreground-deeper: #ffffff;
+        --background: #080808;
+        --elevation: rgba(255, 255, 255, 0.04);
         --warning: #ffd800;
         --destructive: #dc143c;
-        --elevation: rgba(255, 255, 255, 0.04);
+        --muted: rgba(255, 255, 255, 0.35)
     }
 
     body {

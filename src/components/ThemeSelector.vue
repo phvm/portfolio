@@ -7,7 +7,7 @@ const { isDarkMode, changeColorMode } = useTheme();
 
 <template>
   <button
-    class="text-lg py-[2px] px-2 transition-colors hover:text-foregroundDeep"
+    class="text-xl py-[2px] px-2 transition-colors duration-300 hover:text-foregroundDeeper"
     type="button"
     @click.prevent="changeColorMode"
   >

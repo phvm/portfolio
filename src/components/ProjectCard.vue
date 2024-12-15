@@ -25,8 +25,8 @@ const concatedTechonologies = computed(() => {
     class="group/card max-h-96 my-4 p-4 rounded-md bg-transparent shadow-none transition-all duration-300 hover:shadow-md hover:bg-elevation"
   >
     <span
-      :class="isOpen ? ['text-accent', 'font-semibold'] : null"
-      class="inline-block mb-2 transition-all duration-300 group-hover/card:text-accent group-hover/card:font-semibold"
+      :class="isOpen ? ['text-foregroundDeeper', 'font-semibold'] : null"
+      class="inline-block mb-2 transition-all duration-300 text-foregroundDeep font-medium group-hover/card:text-foregroundDeeper group-hover/card:font-semibold"
       >{{ title }}</span
     >
     <p>{{ summary }}</p>
@@ -41,7 +41,7 @@ const concatedTechonologies = computed(() => {
     <Transition>
       <div v-if="isOpen">
         <p>{{ description }}</p>
-        <p class="my-4 font-medium text-accent">Technologies: {{ concatedTechonologies }}</p>
+        <p class="my-4 font-medium text-foregroundDeep tracking-wide">Technologies: {{ concatedTechonologies }}</p>
         <div class="flex justify-end">
           <ExternalLink :link="repoLink" title="Repository" />
         </div>
