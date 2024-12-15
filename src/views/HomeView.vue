@@ -3,7 +3,7 @@
     <PageTitle title="Pedro Moura" />
     <h2 class="my-2 text-lg font-medium">
       Hey, I'm Pedro Moura, I'm a software developer specialized in
-      <strong class="text-accent">front-end development.</strong>
+      <strong class="text-foregroundDeep">front-end development.</strong>
     </h2>
     <InnerText>
       My favorite work is to build software that looks great, is accessible to everyone and is blazing fast,
@@ -28,7 +28,7 @@
       </nav>
 
       <a
-        class="p-2 rounded-md bg-foregroundDeep font-semibold text-background transition-transform duration-300 hover:bg-foregroundDeeper"
+        class="p-2 rounded-md bg-foregroundDeep font-semibold text-background transition-all duration-300 hover:bg-foregroundDeeper hover:scale-[102%]"
         download="pedro_moura_cv"
         href="/pedro_moura_CV.pdf"
       >
