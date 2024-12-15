@@ -13,7 +13,7 @@ defineProps<Props>();
 <template>
   <a
     :href="link"
-    class="w-fit group mr-4 flex items-end border-b-2 transition-colors duration-300 hover:border-accent hover:text-accent"
+    class="w-fit group/links mr-4 text-foregroundDeep font-medium flex items-end border-b-2 transition-colors duration-300 hover:border-accent hover:text-foregroundDeeper"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -21,7 +21,7 @@ defineProps<Props>();
     <span
       >{{ title }}
       <Icon
-        class="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 inline-block"
+        class="transition-transform inline-block group-hover/links:translate-x-0.5 group-hover/links:-translate-y-0.5"
         icon="heroicons:arrow-up-right"
     /></span>
   </a>

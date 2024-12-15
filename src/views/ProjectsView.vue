@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-5xl mx-auto py-10 px-7">
+  <main class="max-w-5xl mx-auto py-5 px-7">
     <PageTitle centralized title="My projects" />
     <div class="mt-12 grid grid-cols-1 md:grid-cols-3 md:gap-x-8 md:gap-y-14">
       <ProjectCard

@@ -19,7 +19,7 @@ const { experienceTitle, company, description, startingDate, endDate, skills } =
       <span class="font-semibold text-foregroundDeep">{{ startingDate }} - {{ endDate }}</span>
       <span class="font-semibold text-foregroundDeep">{{ experienceTitle }} @ {{ company }}</span>
     </div>
-    <p class="text-base/6">{{ description }}</p>
+    <p class="text-base/7">{{ description }}</p>
     <span class="mt-3 mb-1 inline-block">Skills I developed</span>
     <div class="flex flex-wrap justify-center md:justify-normal">
       <SkillChip v-for="(skill, index) in skills" :key="index" :skill-name="skill" />
