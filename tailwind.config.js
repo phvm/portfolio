@@ -13,6 +13,8 @@ export default {
       destructive: "var(--destructive)",
       elevation: "var(--elevation)",
       muted: "var(--muted)",
+      transparent: "transparent",
+      current: "currentColor",
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],

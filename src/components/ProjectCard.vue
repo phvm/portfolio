@@ -21,8 +21,8 @@ const concatedTechonologies = computed(() => {
 
 <template>
   <div
-    :class="isOpen ? ['bg-elevation', 'shadow-md'] : null"
-    class="group/card max-h-96 my-4 p-4 rounded-md bg-transparent shadow-none transition-all duration-300 hover:shadow-md hover:bg-elevation"
+    :class="isOpen ? ['bg-elevation', 'shadow'] : null"
+    class="group/card border-[1px] border-muted max-h-96 my-4 p-4 rounded-md bg-transparent shadow-none transition-all duration-300 hover:shadow hover:bg-elevation"
   >
     <span
       :class="isOpen ? ['text-foregroundDeeper', 'font-semibold'] : null"
@@ -31,14 +31,21 @@ const concatedTechonologies = computed(() => {
     >
     <p>{{ summary }}</p>
     <div class="flex justify-end">
-      <Icon
-        :class="{ 'rotate-180': isOpen }"
-        class="text-lg rotate-0 duration-500 transition-transform hover:cursor-pointer"
-        icon="ic:round-expand-more"
-        @click="isOpen = !isOpen"
-      />
+      <button class="p-2" type="button" @click="isOpen = !isOpen">
+        <Icon
+          :class="{ 'rotate-180': isOpen }"
+          class="text-lg rotate-0 duration-500 transition-transform hover:cursor-pointer"
+          icon="ic:round-expand-more"
+        />
+      </button>
     </div>
-    <Transition>
+    <Transition
+      class="transition-all"
+      enter-active-class="duration-500 ease-out"
+      enter-from-class="-translate-y-8 opacity-50"
+      leave-active-class="duration-300 ease-in"
+      leave-to-class="-translate-y-8 opacity-50"
+    >
       <div v-if="isOpen">
         <p>{{ description }}</p>
         <p class="my-4 font-medium text-foregroundDeep tracking-wide">Technologies: {{ concatedTechonologies }}</p>

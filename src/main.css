@@ -53,7 +53,7 @@ body {
     }
 
     body {
-        @apply bg-background text-foreground transition-colors;
+        @apply bg-background text-foreground transition-colors duration-200;
     }
 }
 
