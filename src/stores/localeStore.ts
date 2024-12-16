@@ -6,7 +6,7 @@ import useLocalStorage from "@/utils/localStorage";
 type languages = "pt" | "en";
 type messages = { [key: string]: string };
 
-const defaultLocale = "en";
+const defaultLocale = "pt";
 const availableMessages = {
   en: en,
   pt: pt,
