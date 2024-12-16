@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { useLocaleStore } from "@/stores/localeStore";
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
+import { useIntlStore, availableLocales } from "@/stores/useIntlStore";
 
-const { changeLocale, availableLocales, currentLocale } = useLocaleStore();
+const store = useIntlStore();
 const isDropdownOpen = ref<boolean>(false);
 
 function dropdownClick(locale: "pt" | "en") {
-  changeLocale(locale);
+  store.changeLocale(locale);
   isDropdownOpen.value = false;
 }
 </script>
@@ -20,7 +20,7 @@ function dropdownClick(locale: "pt" | "en") {
       @click="isDropdownOpen = !isDropdownOpen"
     >
       <Icon icon="icon-park-outline:earth" />
-      {{ currentLocale.toLocaleUpperCase() }}
+      {{ store.currentLocale.toLocaleUpperCase() }}
     </button>
     <Transition
       class="transition-all"
@@ -33,7 +33,7 @@ function dropdownClick(locale: "pt" | "en") {
         <button
           v-for="(locale, index) in availableLocales"
           :key="index"
-          :class="locale === currentLocale ? ['text-foregroundDeeper', 'font-bold'] : ''"
+          :class="locale === store.currentLocale ? ['text-foregroundDeeper', 'font-bold'] : ''"
           class="w-12 my-0.5 transition-all duration-200 hover:text-foregroundDeep hover:font-semibold"
           type="button"
           @click="dropdownClick(locale)"

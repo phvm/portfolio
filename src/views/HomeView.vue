@@ -2,22 +2,24 @@
   <main class="max-w-3xl mx-auto py-5 px-7">
     <PageTitle title="Pedro Moura" />
     <h2 class="my-2 text-lg font-medium">
-      {{ getMessage("homeView.presentation") }}
-      <strong class="text-foregroundDeep">{{ getMessage("homeView.profession") }}</strong>
+      {{ store.getMessage("homeView.presentation") }}
+      <strong class="text-foregroundDeep">{{ store.getMessage("homeView.profession") }}</strong>
     </h2>
     <InnerText>
-      {{ getMessage("homeView.aboutWork") }}
+      {{ store.getMessage("homeView.aboutWork") }}
     </InnerText>
     <InnerText>
-      {{ getMessage("homeView.websiteSummary.p1") }}
-      <NavigationLink :link="navLinks.projects.link">{{ getMessage("homeView.projectsLink") }}</NavigationLink>
-      {{ getMessage("homeView.websiteSummary.p2") }}
-      <NavigationLink :link="navLinks.experiences.link"> {{ getMessage("homeView.experiencesLink") }}</NavigationLink>
+      {{ store.getMessage("homeView.websiteSummary.p1") }}
+      <NavigationLink :link="navLinks.projects.link">{{ store.getMessage("homeView.projectsLink") }}</NavigationLink>
+      {{ store.getMessage("homeView.websiteSummary.p2") }}
+      <NavigationLink :link="navLinks.experiences.link">
+        {{ store.getMessage("homeView.experiencesLink") }}
+      </NavigationLink>
     </InnerText>
     <InnerText>
-      {{ getMessage("homeView.aboutMe") }}
+      {{ store.getMessage("homeView.aboutMe") }}
     </InnerText>
-    <p class="mt-6 inline-block">{{ getMessage("homeView.findMe") }}</p>
+    <p class="mt-6 inline-block">{{ store.getMessage("homeView.findMe") }}</p>
     <div aria-hidden="true" class="flex flex-col justify-between md:flex-row md:items-center">
       <nav class="flex my-4">
         <ExternalLink icon="iconoir:github" link="https://github.com/phvm" title="Github" />
@@ -30,7 +32,7 @@
         href="/pedro_moura_CV.pdf"
         role="button"
       >
-        {{ getMessage("homeView.cvDownload") }}
+        {{ store.getMessage("homeView.cvDownload") }}
       </a>
     </div>
   </main>
@@ -42,7 +44,7 @@ import ExternalLink from "@/components/ExternalLink.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import InnerText from "@/components/InnerText.vue";
 import { navLinks } from "@/constants";
-import { useLocaleStore } from "@/stores/localeStore";
+import { useIntlStore } from "@/stores/useIntlStore";
 
-const { getMessage } = useLocaleStore();
+const store = useIntlStore();
 </script>
