@@ -9,9 +9,9 @@ const { isDarkMode, changeColorMode } = useTheme();
   <button class="text-xl py-[2px] px-2 hover:text-foregroundDeeper" type="button" @click.prevent="changeColorMode">
     <Transition
       class="transition-all"
-      enter-active-class="duration-200 ease-in"
+      enter-active-class="duration-150 ease-in"
       enter-from-class="opacity-0"
-      leave-active-class="duration-200 ease-out"
+      leave-active-class="duration-150 ease-in"
       leave-to-class="opacity-0"
       mode="out-in"
     >

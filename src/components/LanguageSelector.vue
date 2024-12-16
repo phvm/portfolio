@@ -13,7 +13,7 @@ function dropdownClick(locale: "pt" | "en") {
 </script>
 
 <template>
-  <div class="flex flex-col justify-center">
+  <div class="flex flex-col justify-center ml-3">
     <button
       class="w-12 flex items-center justify-evenly rounded transition-colors duration-300 hover:text-foregroundDeep"
       type="button"
