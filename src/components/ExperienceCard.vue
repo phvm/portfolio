@@ -20,9 +20,9 @@ const { getMessage } = useLocaleStore();
   <div class="my-8">
     <div class="w-full flex flex-col items-center mb-3 md:flex-row md:justify-between">
       <span class="font-semibold text-foregroundDeep">{{ startingDate }} - {{ endDate }}</span>
-      <span class="font-semibold text-foregroundDeep">{{ experienceTitle }} @ {{ company }}</span>
+      <span class="font-semibold text-foregroundDeep">{{ getMessage(experienceTitle) }} @ {{ company }}</span>
     </div>
-    <p class="text-base/7">{{ description }}</p>
+    <p class="text-base/7">{{ getMessage(description) }}</p>
     <span class="mt-3 mb-1 inline-block">{{ getMessage("experienceView.developedSkills") }}</span>
     <div class="flex flex-wrap justify-center md:justify-normal">
       <SkillChip v-for="(skill, index) in skills" :key="index" :skill-name="skill" />

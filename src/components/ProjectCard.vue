@@ -32,7 +32,7 @@ const { getMessage } = useLocaleStore();
     >
       {{ title }}
     </p>
-    <p>{{ summary }}</p>
+    <p>{{ getMessage(summary) }}</p>
     <div aria-hidden="true" class="flex justify-end">
       <button class="p-2" type="button" @click="isOpen = !isOpen">
         <Icon
@@ -50,7 +50,7 @@ const { getMessage } = useLocaleStore();
       leave-to-class="-translate-y-12 opacity-0"
     >
       <div v-if="isOpen">
-        <p>{{ description }}</p>
+        <p>{{ getMessage(description) }}</p>
         <p class="my-4 font-medium text-foregroundDeep tracking-wide">
           {{ getMessage("projectsCard.technologies") }}: {{ concatenatedTechnologies }}
         </p>
