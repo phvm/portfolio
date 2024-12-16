@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
 import { Icon } from "@iconify/vue";
-
 import ExternalLink from "@/components/ExternalLink.vue";
-import { useLocaleStore } from "@/stores/localeStore";
+import { useIntlStore } from "@/stores/useIntlStore";
 
 interface Props {
   title: string;
@@ -18,7 +17,7 @@ const isOpen = ref<boolean>(false);
 const concatenatedTechnologies = computed(() => {
   return technologies.join(", ");
 });
-const { getMessage } = useLocaleStore();
+const store = useIntlStore();
 </script>
 
 <template>
@@ -32,7 +31,7 @@ const { getMessage } = useLocaleStore();
     >
       {{ title }}
     </p>
-    <p>{{ getMessage(summary) }}</p>
+    <p>{{ store.getMessage(summary) }}</p>
     <div aria-hidden="true" class="flex justify-end">
       <button class="p-2" type="button" @click="isOpen = !isOpen">
         <Icon
@@ -50,12 +49,12 @@ const { getMessage } = useLocaleStore();
       leave-to-class="-translate-y-12 opacity-0"
     >
       <div v-if="isOpen">
-        <p>{{ getMessage(description) }}</p>
+        <p>{{ store.getMessage(description) }}</p>
         <p class="my-4 font-medium text-foregroundDeep tracking-wide">
-          {{ getMessage("projectsCard.technologies") }}: {{ concatenatedTechnologies }}
+          {{ store.getMessage("projectsCard.technologies") }}: {{ concatenatedTechnologies }}
         </p>
         <div class="flex justify-end">
-          <ExternalLink :link="repoLink" :title="getMessage('projectsCard.repo')" />
+          <ExternalLink :link="repoLink" :title="store.getMessage('projectsCard.repo')" />
         </div>
       </div>
     </Transition>

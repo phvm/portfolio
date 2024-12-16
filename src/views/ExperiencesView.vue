@@ -2,14 +2,14 @@
 import PageTitle from "@/components/PageTitle.vue";
 import WorkExperience from "@/components/ExperienceCard.vue";
 import { experienceList } from "@/constants";
-import { useLocaleStore } from "@/stores/localeStore";
+import { useIntlStore } from "@/stores/useIntlStore";
 
-const { getMessage } = useLocaleStore();
+const store = useIntlStore();
 </script>
 
 <template>
   <main class="px-7 py-5 mx-auto max-w-3xl">
-    <PageTitle :title="getMessage('experienceView.title')" />
+    <PageTitle :title="store.getMessage('experienceView.title')" />
     <WorkExperience
       v-for="(experience, index) in experienceList"
       :key="index"

@@ -1,5 +1,3 @@
-import { useLocaleStore } from "@/stores/localeStore";
-
 interface Resume {
   devTools: string[];
   technologies: string[];
