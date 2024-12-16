@@ -2,25 +2,22 @@
   <main class="max-w-3xl mx-auto py-5 px-7">
     <PageTitle title="Pedro Moura" />
     <h2 class="my-2 text-lg font-medium">
-      Hey, I'm Pedro Moura, I'm a software developer specialized in
-      <strong class="text-foregroundDeep">front-end development.</strong>
+      {{ getMessage("homeView.presentation") }}
+      <strong class="text-foregroundDeep">{{ getMessage("homeView.profession") }}</strong>
     </h2>
     <InnerText>
-      My favorite work is to build software that looks great, is accessible to everyone and is blazing fast,
-      meticulously crafting with accessibility, responsiveness and performance in mind.
+      {{ getMessage("homeView.aboutWork") }}
     </InnerText>
     <InnerText>
-      You can see some
-      <NavigationLink :link="navLinks.projects.link">projects I've already built</NavigationLink>
-      (sometimes with wonderful people) or if you're curious about my experiences history as a software developer,
-      <NavigationLink :link="navLinks.experiences.link"> you can go here.</NavigationLink>
+      {{ getMessage("homeView.websiteSummary.p1") }}
+      <NavigationLink :link="navLinks.projects.link">{{ getMessage("homeView.projectsLink") }}</NavigationLink>
+      {{ getMessage("homeView.websiteSummary.p2") }}
+      <NavigationLink :link="navLinks.experiences.link"> {{ getMessage("homeView.experiencesLink") }}</NavigationLink>
     </InnerText>
     <InnerText>
-      Outside of coding and building software, my other hobbies include playing video games and cooking. I'm a
-      experimentalist by nature. I feel trilled to try new things, be it a new technology, a new flavor of my favorite
-      drink or a new way to cook my favorite dish.
+      {{ getMessage("homeView.aboutMe") }}
     </InnerText>
-    <p class="mt-6 inline-block">Find me or come say hi on</p>
+    <p class="mt-6 inline-block">{{ getMessage("homeView.findMe") }}</p>
     <div aria-hidden="true" class="flex flex-col justify-between md:flex-row md:items-center">
       <nav class="flex my-4">
         <ExternalLink icon="iconoir:github" link="https://github.com/phvm" title="Github" />
@@ -33,7 +30,7 @@
         href="/pedro_moura_CV.pdf"
         role="button"
       >
-        Download my CV
+        {{ getMessage("homeView.cvDownload") }}
       </a>
     </div>
   </main>
@@ -45,4 +42,7 @@ import ExternalLink from "@/components/ExternalLink.vue";
 import PageTitle from "@/components/PageTitle.vue";
 import InnerText from "@/components/InnerText.vue";
 import { navLinks } from "@/constants";
+import { useLocaleStore } from "@/stores/localeStore";
+
+const { getMessage } = useLocaleStore();
 </script>

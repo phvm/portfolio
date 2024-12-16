@@ -3,6 +3,7 @@ import { computed, ref } from "vue";
 import { Icon } from "@iconify/vue";
 
 import ExternalLink from "@/components/ExternalLink.vue";
+import { useLocaleStore } from "@/stores/localeStore";
 
 interface Props {
   title: string;
@@ -17,6 +18,7 @@ const isOpen = ref<boolean>(false);
 const concatenatedTechnologies = computed(() => {
   return technologies.join(", ");
 });
+const { getMessage } = useLocaleStore();
 </script>
 
 <template>
@@ -49,9 +51,11 @@ const concatenatedTechnologies = computed(() => {
     >
       <div v-if="isOpen">
         <p>{{ description }}</p>
-        <p class="my-4 font-medium text-foregroundDeep tracking-wide">Technologies: {{ concatenatedTechnologies }}</p>
+        <p class="my-4 font-medium text-foregroundDeep tracking-wide">
+          {{ getMessage("projectsCard.technologies") }}: {{ concatenatedTechnologies }}
+        </p>
         <div class="flex justify-end">
-          <ExternalLink :link="repoLink" title="Repository" />
+          <ExternalLink :link="repoLink" :title="getMessage('projectsCard.repo')" />
         </div>
       </div>
     </Transition>

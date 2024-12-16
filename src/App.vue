@@ -15,9 +15,9 @@ const translateDistance = computed(() => {
   <RouterView v-slot="{ Component }" class="transition-all">
     <Transition
       :enter-from-class="`opacity-0 ${translateDistance}`"
-      :leave-to-class="`opacity-0 -${translateDistance}`"
       enter-active-class="ease-in duration-200"
       leave-active-class="ease-in-out duration-200"
+      leave-to-class="opacity-0"
       mode="out-in"
     >
       <component :is="Component" />

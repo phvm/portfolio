@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import SkillChip from "@/components/SkillChip.vue";
+import { useLocaleStore } from "@/stores/localeStore";
 
 interface Props {
   experienceTitle: string;
@@ -11,6 +12,8 @@ interface Props {
 }
 
 const { experienceTitle, company, description, startingDate, endDate, skills } = defineProps<Props>();
+
+const { getMessage } = useLocaleStore();
 </script>
 
 <template>
@@ -20,7 +23,7 @@ const { experienceTitle, company, description, startingDate, endDate, skills } =
       <span class="font-semibold text-foregroundDeep">{{ experienceTitle }} @ {{ company }}</span>
     </div>
     <p class="text-base/7">{{ description }}</p>
-    <span class="mt-3 mb-1 inline-block">Skills I developed</span>
+    <span class="mt-3 mb-1 inline-block">{{ getMessage("experienceView.developedSkills") }}</span>
     <div class="flex flex-wrap justify-center md:justify-normal">
       <SkillChip v-for="(skill, index) in skills" :key="index" :skill-name="skill" />
     </div>
