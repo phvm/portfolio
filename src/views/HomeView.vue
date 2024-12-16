@@ -29,8 +29,8 @@
       <a
         class="p-2 my-4 text-center rounded-md bg-foregroundDeep font-semibold text-background transition-all duration-300 hover:bg-foregroundDeeper hover:scale-[102%]"
         download="pedro_moura_cv"
-        href="/pedro_moura_CV.pdf"
         role="button"
+        href="/pt/pedro_moura_CV.pdf"
       >
         {{ store.getMessage("homeView.cvDownload") }}
       </a>
