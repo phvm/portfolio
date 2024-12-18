@@ -2,7 +2,7 @@
 import { RouterLink } from "vue-router";
 import { Icon } from "@iconify/vue";
 import { useScreenSize } from "@/composables/useScreenSize";
-import { toUppercaseFirstChart } from "@/utils/stringUtils";
+import { toUppercaseFirstChar } from "@/utils/stringUtils";
 import { useIntlStore } from "@/stores/useIntlStore";
 
 interface Props {
@@ -26,7 +26,7 @@ const { link, title, icon, isActive } = defineProps<Props>();
   >
     <button class="flex items-center font-medium transition-all group-active/navlink:translate-y-1.5">
       <Icon :icon="icon" class="text-xl mx-0.5" />
-      <span v-if="!isMobile"> {{ toUppercaseFirstChart(store.getMessage(title)) }}</span>
+      <span v-if="!isMobile"> {{ toUppercaseFirstChar(store.getMessage(title)) }}</span>
     </button>
   </RouterLink>
 </template>

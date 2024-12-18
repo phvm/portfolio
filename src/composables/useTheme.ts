@@ -3,6 +3,7 @@ import useLocalStorage from "@/utils/localStorage";
 
 export default function useTheme() {
   const isDarkMode = ref<boolean | null>();
+
   const { getItem, saveItem } = useLocalStorage<boolean>("darkMode");
 
   const prefersDarkMode: boolean = window.matchMedia("(prefers-color-scheme: dark)").matches;
