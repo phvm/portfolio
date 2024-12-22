@@ -19,15 +19,15 @@ const store = useIntlStore();
 <template>
   <div class="my-8">
     <div class="w-full flex flex-col items-center mb-3 md:flex-row md:justify-between">
-      <span class="font-semibold text-foregroundDeep">{{ startingDate }} - {{ endDate }}</span>
-      <span class="font-semibold text-foregroundDeep">{{ store.getMessage(experienceTitle) }} @ {{ company }}</span>
+      <span class="font-semibold text-foregroundDeep" data-test="dates">{{ startingDate }} - {{ endDate }}</span>
+      <span class="font-semibold text-foregroundDeep" data-test="title"
+        >{{ store.getMessage(experienceTitle) }} @ {{ company }}</span
+      >
     </div>
-    <p class="text-base/7">{{ store.getMessage(description) }}</p>
+    <p class="text-base/7" data-test="description">{{ store.getMessage(description) }}</p>
     <span class="mt-3 mb-1 inline-block">{{ store.getMessage("experienceView.developedSkills") }}</span>
     <div class="flex flex-wrap justify-center md:justify-normal">
-      <SkillChip v-for="(skill, index) in skills" :key="index" :skill-name="skill" />
+      <SkillChip v-for="(skill, index) in skills" :key="index" :skill-name="skill" data-test="skills" />
     </div>
   </div>
 </template>
-
-<style scoped></style>
