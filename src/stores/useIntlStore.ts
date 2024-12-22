@@ -7,12 +7,12 @@ import { computed, ref, watchEffect } from "vue";
 type languages = "pt" | "en";
 type messages = { [key: string]: string };
 
-const defaultLocale = "pt";
 const availableMessages = {
   en: en,
   pt: pt,
 };
 export const availableLocales: languages[] = ["pt", "en"];
+export const defaultLocale = "pt";
 
 export const useIntlStore = defineStore("intl", () => {
   const { getItem, saveItem } = useLocalStorage<languages>("language");
@@ -27,9 +27,6 @@ export const useIntlStore = defineStore("intl", () => {
   }
 
   function changeLocale(language: "en" | "pt") {
-    if (!availableLocales.includes(language)) {
-      return (currentLocale.value = defaultLocale);
-    }
     return (currentLocale.value = language);
   }
 
