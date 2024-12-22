@@ -6,6 +6,7 @@ const { title, centralized } = defineProps<{ title: string; centralized?: boolea
   <h1
     :class="{ 'text-center': centralized }"
     class="text-xl text-foregroundDeeper font-bold text-left mb-8 md:text-4xl"
+    data-test="title"
   >
     {{ title }}
   </h1>

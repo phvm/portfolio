@@ -1,5 +1,5 @@
 import ExperienceCard from "../../src/components/ExperienceCard.vue";
-import { describe, test, expect, beforeEach } from "vitest";
+import { describe, test, expect } from "vitest";
 import { createTestingPinia } from "@pinia/testing";
 import { mount } from "@vue/test-utils";
 import en from "../../src/messages/en.json";
@@ -20,15 +20,10 @@ mount(Intl, {
   },
 });
 
-beforeEach(() => {
-  en["Mock title"] = "Mock title";
-  en["Mock description"] = "Mock description";
-  pt["Mock title"] = "Mock title";
-  pt["Mock description"] = "Mock description";
-});
-
 describe("Rendering experience card correctly", () => {
   test("Rendering experience title and company correctly", async () => {
+    en["Mock title"] = "Mock title";
+    pt["Mock title"] = "Mock title";
     const wrapper = mount(ExperienceCard, {
       props: mockProps,
     });
@@ -47,6 +42,8 @@ describe("Rendering experience card correctly", () => {
   });
 
   test("Rendering description correctly", async () => {
+    en["Mock description"] = "Mock description";
+    pt["Mock description"] = "Mock description";
     const wrapper = mount(ExperienceCard, {
       props: mockProps,
     });
